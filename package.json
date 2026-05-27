@@ -18,7 +18,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git-cz",
+    "smart-commit": "git add . && node commit.mjs"
   },
   "lint-staged": {
     "*.{ts,js}": [
@@ -65,6 +67,7 @@
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
+    "git-cz": "^4.9.0",
     "globals": "^17.0.0",
     "husky": "^9.1.7",
     "jest": "^30.0.0",
